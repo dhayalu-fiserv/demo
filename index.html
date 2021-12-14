@@ -116,7 +116,7 @@
         function shareText(){
             //Android
 			if (window.FTKAndroidInterface != undefined) {
-                window.FTKAndroidInterface.shareText( text, url);
+                window.FTKAndroidInterface.printPhoto(image, text, url);
 
 			}
         }
@@ -264,7 +264,7 @@
     <button type="button" onclick="sharePhoto()">Share QR Code</button>
     <br><br>
 	
-    <button type="button" onclick="shareText()">Share Text</button>
+    <button type="button" onclick="shareText()">Print QR code</button>
     <br><br>
 
     <button type="button" onclick="takePhotoFromCamera()">Take a Photo</button>
