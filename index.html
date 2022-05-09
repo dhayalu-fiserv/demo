@@ -172,8 +172,8 @@
 		function timeOut(){
 			//Android
 			if (window.FTKAndroidInterface != undefined) {
-
-				window.FTKAndroidInterface.sessionTimeout("session time out from UI");
+				var tag = "session time out from UI";
+				window.FTKAndroidInterface.sessionTimeout(tag);
 
 			}
 		}
