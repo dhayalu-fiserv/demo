@@ -169,15 +169,33 @@
        // setTitle(obj.photo);
         }
 
-		function timeOut(){
-			//Android
-			if (window.FTKAndroidInterface != undefined) {
-				var tag = "session time out from UI";
-				//window.FTKAndroidInterface.sessionTimeout(tag);
-				window.FTKAndroidInterface.sessionTimeout();
+	function timeOut(){
+		//Android
+		if (window.FTKAndroidInterface != undefined) {
+			var tag = "session time out from UI";
+			//window.FTKAndroidInterface.sessionTimeout(tag);
+			window.FTKAndroidInterface.sessionTimeout();
 
-			}
 		}
+	}
+	
+	function timeOutWithName(){
+		//Android
+		if (window.FTKAndroidInterface != undefined) {
+			var tag = "session time out from UI";
+			window.FTKAndroidInterface.sessionTimeout(tag);
+
+		}
+	}
+	
+	function passingValueToParentApp(){
+		//Android
+		if (window.FTKAndroidInterface != undefined) {
+			var value = "I'm coming from UI";
+			window.FTKAndroidInterface.fetchTag(value);
+
+		}
+	}
 	
 	// get location from sdk
         function getLocation() {
@@ -279,6 +297,10 @@
     <br><br>
 
     <button type="button" onclick="timeOut()">Session Time Out</button>
+    <br><br>
+	<button type="button" onclick="timeOutWithName()">Session Time Out with Tag</button>
+    <br><br>
+	<button type="button" onclick="passingValueToParentApp()">Passing value to Parent App</button>
     <br><br>
 	
 	<button type="button" onclick="getLocation()">Get Location</button>
