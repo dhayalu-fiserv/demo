@@ -1,0 +1,21 @@
+{
+
+    "applinks": {
+
+        "apps": [],
+
+        "details": [
+
+            {
+
+                "appID": "HFG85958QC.com.fiserv.DeepLinking",
+
+                "paths": [ "/popnet/*" ]
+
+            }
+
+        ]
+
+    }
+
+}
