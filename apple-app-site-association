@@ -10,7 +10,7 @@
 
                 "appID": "HFG85958QC.com.fiserv.DeepLinking",
 
-                "paths": [ "/popnet/*" ]
+                "paths": [ "/demo/*" ]
 
             }
 
