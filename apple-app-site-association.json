@@ -8,9 +8,9 @@
 
             {
 
-                "appID": "HFG85958QC.com.fiserv.DeepLinking",
+                "appID": "F5RJW6T948.com.fiserv.DeepLinking",
 
-                "paths": [ "/demo/*" ]
+                "paths": [ "/*" ]
 
             }
 
