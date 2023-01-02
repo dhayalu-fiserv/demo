@@ -1,21 +1,11 @@
 {
-
     "applinks": {
-
         "apps": [],
-
         "details": [
-
             {
-
-                "appID": "F5RJW6T948.com.fiserv.DeepLinking",
-
+                "appID": "F5RJW6T948.com.techlabroid.AppLinking",
                 "paths": [ "/*" ]
-
             }
-
         ]
-
     }
-
 }
