@@ -188,6 +188,15 @@
 		}
 	}
 	
+	function callbackLogInfo(obj){
+		//Android
+		if (window.FTKAndroidInterface != undefined) {
+			const parsedData = JSON.parse(obj.info);
+			alert( "Result : " +obj.info)
+
+		}
+	}
+	
 	function passingValueToParentApp(){
 		//Android
 		if (window.FTKAndroidInterface != undefined) {
