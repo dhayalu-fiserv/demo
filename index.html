@@ -3,6 +3,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <script>
+	
+	
+        // Callback Network Status
+        function callbackNetworkStatus(obj) {
+		const parsedData = JSON.parse(obj.code);
+		alert( "Result : " +obj.code)
+            
+		//iOS
+		if(window.webkit != undefined){
+			alert("iOS :"+parsedData)
+		}
+        }
 
 
 		// Single Contact
