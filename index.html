@@ -7,14 +7,21 @@
 	
         // Callback Network Status
         function callbackNetworkStatus(obj) {
-		const parsedData = JSON.parse(obj.code);
-		alert( "Result : " +obj.code)
+		const parsedData = JSON.parse(obj.status);
+		alert( "Result : " + parsedData)
             
 		//iOS
 		if(window.webkit != undefined){
 			alert("iOS :"+parsedData)
 		}
         }
+	
+	function checkNetworkStatusClicked(){
+	   //Android
+  	    if (window.FTKAndroidInterface != undefined) {
+		window.FTKAndroidInterface.checkNetworkStatus();	
+	    }
+	}
 
 
 		// Single Contact
@@ -316,6 +323,9 @@
 
     <button type="button" onclick="checkPermissionStatus()">Check Permission</button>
     <br><br>
+	
+    <button type="button" onclick="checkNetworkStatusClicked()">Check Network Status</button>
+    <br><br>	
 
     <button type="button" onclick="timeOut()">Session Time Out</button>
     <br><br>
