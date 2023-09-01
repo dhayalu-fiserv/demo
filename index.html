@@ -42,6 +42,13 @@
           }else
 		  {
 			const parsedData = JSON.parse(result);
+			var img = document.createElement('img');
+			var base64String = obj.image;
+			
+			img.setAttribute('src', 'data:image/png;base64,'+base64String);
+			img.width = img.height = 150;
+			document.getElementById('image').setAttribute('src', 'data:image/png;base64,'+base64String);
+			  
 			alert( "Result : " + result)
           }
 
