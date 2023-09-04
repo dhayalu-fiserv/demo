@@ -43,7 +43,7 @@
 		  {
 			const parsedData = JSON.parse(result);
 			var img = document.createElement('img');
-			var base64String = result.image;
+			var base64String = parsedData.image;
 			
 			img.setAttribute('src', 'data:image/png;base64,'+base64String);
 			img.width = img.height = 150;
