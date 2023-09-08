@@ -75,6 +75,13 @@
 		if (parsedData.cached){
 			//alert("Cached before stringify : "+JSON.stringify(parsedData)+"\n"+cachedContacts)
 			alert("Cached after stringify: "+JSON.stringify(parsedData)+"\n"+result)
+			const container = document.getElementById('image-container');
+     			
+        		for (let i = 0; i < cachedContacts.length; i++) {
+            		const img = document.createElement('img');
+            		img.src = cachedContacts[i].photo;
+            		container.appendChild(img);
+        		}
 		}else{
 			alert("Cached : false")
 		}
@@ -355,5 +362,6 @@
     <script> titleToColor('Blue') </script>
 
 </center>
+	<div id="image-container"></div>
 </body>
 </html>
