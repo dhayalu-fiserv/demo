@@ -79,7 +79,7 @@
      			
         		for (let i = 0; i < cachedContacts.length; i++) {
             		const img = document.createElement('img');
-            		img.src = cachedContacts[i].photo;
+            		img.src = 'data:image/png;base64,'+cachedContacts[i].photo;
             		container.appendChild(img);
         		}
 		}else{
