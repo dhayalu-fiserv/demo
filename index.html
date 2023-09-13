@@ -22,42 +22,17 @@
         }else
       {
       const parsedData = JSON.parse(result);
-      //var img = document.createElement('img');
       var base64String = parsedData.image;
-      
-      //img.setAttribute('src', 'data:image/png;base64,'+base64String);
-      
-      const container = document.getElementById('image-container');
-      const row = document.createElement('div');
-      row.classList.add('row');
-      
-      const column1 = document.createElement('div');
-      column1.classList.add('column');
-      const img = document.createElement('img');
-      img.src = 'data:image/png;base64,'+base64String;
-      column1.appendChild(img);
-      
-      const column2 = document.createElement('div');
-      column2.classList.add('column');
-      const label = document.createElement('label');
-      
-      if (parsedData.hasOwnProperty('phone')){
-      label.innerText = parsedData.name+"\n\n"+parsedData.phone;	
-      } 
+      document.getElementById('single-image').setAttribute('src', 'data:image/png;base64,'+base64String);
+      document.getElementById('name').setAttribute(parsedData.name)
       if (parsedData.hasOwnProperty('email')){
-      label.innerText = parsedData.name+"\n\n"+parsedData.email;
+         document.getElementById('token').setAttribute(parsedData.email)
       }
-      column2.appendChild(label);
-      
-      row.appendChild(column1);
-      row.appendChild(column2);
-      
-      container.appendChild(row);
-      
-      //document.getElementById('image').setAttribute('src', 'data:image/png;base64,'+base64String);
-      
-      //alert( "Result : " + result)
-        }
+      if (parsedData.hasOwnProperty('phone')){
+         document.getElementById('token').setAttribute(parsedData.phone)
+      }
+
+      }
       
       }
       
@@ -102,6 +77,15 @@
          <img id = "image">
          <script> titleToColor('Blue') </script>
       </center>
+      <div class="row">
+         <div class="column">
+            <img id = "single-image">
+         </div>
+         <div class="column">
+            <label id="name">
+            <label id="token">
+         </div>
+      </div>
       <div id="image-container"></div>
    </body>
 </html>
