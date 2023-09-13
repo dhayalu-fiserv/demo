@@ -2,44 +2,7 @@
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
-   <script>
-      
-      // Single Contact
-      function getSingleContactFromNativeCode() {
-      
-      //Android
-      if (window.FTKAndroidInterface != undefined) {
-      window.FTKAndroidInterface.getOneContact();
-      
-          }
-      }
 
-      // Callback Single Contact
-      function callbackOneContact(obj) {
-        var result = obj.contact
-        if(result.includes("Contact Not")) {
-      alert(result)
-        }else
-      {
-         
-      alert( "Result : " + result)
-      const parsedData = JSON.parse(result);
-      var base64String = parsedData.image;
-      document.getElementById('single-image').setAttribute('src', 'data:image/png;base64,'+base64String);
-      document.getElementById('name').innerHTML = parsedData.name;
-      const token = document.getElementById('token-value');
-      document.getElementById('token-value').innerHTML = "dhayalu@gmail.com";
-      if (parsedData.hasOwnProperty('email')){
-         token.innerHTML = parsedData.email;
-      }
-      if (parsedData.hasOwnProperty('phone')){
-         token.innerHTML = parsedData.phone;
-      }
-      }
-      
-      }
-      
-   </script>
    <body id="body">
       <center>
          <br><br>
@@ -91,4 +54,44 @@
       </div>
       <div id="image-container"></div>
    </body>
+   
+   <script>
+      
+      // Single Contact
+      function getSingleContactFromNativeCode() {
+      
+      //Android
+      if (window.FTKAndroidInterface != undefined) {
+      window.FTKAndroidInterface.getOneContact();
+      
+          }
+      }
+
+      // Callback Single Contact
+      function callbackOneContact(obj) {
+        var result = obj.contact
+        if(result.includes("Contact Not")) {
+      alert(result)
+        }else
+      {
+         
+      alert( "Result : " + result)
+      const parsedData = JSON.parse(result);
+      var base64String = parsedData.image;
+      document.getElementById('single-image').setAttribute('src', 'data:image/png;base64,'+base64String);
+      document.getElementById('name').innerHTML = parsedData.name;
+      const token = document.getElementById('token-value');
+      document.getElementById('token-value').innerHTML = "dhayalu@gmail.com";
+      if (parsedData.hasOwnProperty('email')){
+         token.innerHTML = parsedData.email;
+      }
+      if (parsedData.hasOwnProperty('phone')){
+         token.innerHTML = parsedData.phone;
+      }
+      }
+      
+      }
+      
+   </script>
+   
 </html>
