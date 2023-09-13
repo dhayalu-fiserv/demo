@@ -48,8 +48,6 @@
          </div>
          <div class="column">
             <label id="name">
-            <br><br>
-            <label id="email">
          </div>
       </div>
       <div id="image-container"></div>
@@ -79,14 +77,14 @@
       const parsedData = JSON.parse(result);
       var base64String = parsedData.image;
       document.getElementById('single-image').setAttribute('src', 'data:image/png;base64,'+base64String);
-      document.getElementById('name').innerHTML = parsedData.name;
-      const token = document.getElementById('email');
-      document.getElementById('email').innerHTML = "dhayalu@gmail.com";
+      const name = document.getElementById('name').innerHTML = parsedData.name;
+      
+      
       if (parsedData.hasOwnProperty('email')){
-         token.innerHTML = parsedData.email;
+         token.innerHTML = parsedData.name +"\n\n"+parsedData.email;
       }
       if (parsedData.hasOwnProperty('phone')){
-         token.innerHTML = parsedData.phone;
+         token.innerHTML = parsedData.name +"\n\n"+parsedData.phone;
       }
       }
       
