@@ -45,11 +45,38 @@
 			var img = document.createElement('img');
 			var base64String = parsedData.image;
 			
-			img.setAttribute('src', 'data:image/png;base64,'+base64String);
-			img.width = img.height = 150;
-			document.getElementById('image').setAttribute('src', 'data:image/png;base64,'+base64String);
+			//img.setAttribute('src', 'data:image/png;base64,'+base64String);
 			  
-			alert( "Result : " + result)
+			const container = document.getElementById('image-container');
+			const row = document.createElement('div');
+    			row.classList.add("row");
+			  
+			const column1 = document.createElement('div');
+			column1.classList.add("column");
+			const img = document.createElement('img');
+            		img.src = 'data:image/png;base64,'+base64String;
+			column1.appendChild(img);
+				
+    			const column2 = document.createElement('div');
+			column2.classList.add("column");
+			const label = document.createElement('label');
+			  
+			if (cachedContacts[i].hasOwnProperty('phone')){
+			label.innerText = cachedContacts[i].name+"\n\n"+cachedContacts[i].phone;	
+			} 
+			if (cachedContacts[i].hasOwnProperty('email')){
+			label.innerText = cachedContacts[i].name+"\n\n"+cachedContacts[i].email;
+			}
+			column2.appendChild(label);
+				
+			row.appendChild(column1);
+			row.appendChild(column2);
+
+			container.appendChild(row);
+			  
+			//document.getElementById('image').setAttribute('src', 'data:image/png;base64,'+base64String);
+			  
+			//alert( "Result : " + result)
           }
 
         }
