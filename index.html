@@ -90,13 +90,13 @@
 				column2.classList.add("column");
 				const label = document.createElement('label');
 				var token = cachedContacts[i].tokenType;
-				label.innerText = cachedContacts[i].name+"\n\n"+cachedContacts[i].token;
-				column2.appendChild(label);
+				label.innerText = cachedContacts[i].name+"\n\n"+cachedContacts[i].tokenType+cachedContacts[i].token;
+				column1.appendChild(label);
 				
 				row.appendChild(column1);
 				row.appendChild(column2);
 				
-				container.appendChild(row);
+				container.appendChild(column1);
 				
 			// if (cachedContacts[i].hasOwnProperty('photo')){
 			// 	const img = document.createElement('img');
