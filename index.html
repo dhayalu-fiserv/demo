@@ -26,10 +26,10 @@
       document.getElementById('single-image').setAttribute('src', 'data:image/png;base64,'+base64String);
       document.getElementById('name').setAttribute(parsedData.name)
       if (parsedData.hasOwnProperty('email')){
-         document.getElementById('token').setAttribute(parsedData.email)
+         document.getElementById('token').innerHTML(parsedData.email)
       }
       if (parsedData.hasOwnProperty('phone')){
-         document.getElementById('token').setAttribute(parsedData.phone)
+         document.getElementById('token').innerHTML(parsedData.phone)
       }
 
       }
