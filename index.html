@@ -76,10 +76,11 @@
 			alert("Cached before stringify : "+"\n"+cachedContacts)
 			//alert("Cached after stringify: "+JSON.stringify(parsedData)+"\n"+result)
 			const container = document.getElementById('image-container');
-			
+			const row = document.createElement('div');
+    			row.classList.add("row");
         		for (let i = 0; i < cachedContacts.length; i++) {
-				const row = document.createElement('div');
-    				row.classList.add("row");
+				//const row = document.createElement('div');
+    				//row.classList.add("row");
 				
 				const column1 = document.createElement('div');
 				column1.classList.add("column");
@@ -102,7 +103,7 @@
 				row.appendChild(column1);
 				row.appendChild(column2);
 				
-				container.appendChild(row);
+				
 				
 			// if (cachedContacts[i].hasOwnProperty('photo')){
 			// 	const img = document.createElement('img');
@@ -114,6 +115,7 @@
 			// 	container.appendChild(label);
 			// }
         		}
+			container.appendChild(row);
 		}else{
 			alert("Cached : false")
 		}
