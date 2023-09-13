@@ -22,7 +22,7 @@
         }else
       {
       const parsedData = JSON.parse(result);
-      var img = document.createElement('img');
+      //var img = document.createElement('img');
       var base64String = parsedData.image;
       
       //img.setAttribute('src', 'data:image/png;base64,'+base64String);
@@ -34,7 +34,7 @@
       const column1 = document.createElement('div');
       column1.classList.add("column");
       const img = document.createElement('img');
-          		img.src = 'data:image/png;base64,'+base64String;
+      img.src = 'data:image/png;base64,'+base64String;
       column1.appendChild(img);
       
       const column2 = document.createElement('div');
