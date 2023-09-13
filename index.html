@@ -41,11 +41,11 @@
       column2.classList.add("column");
       const label = document.createElement('label');
       
-      if (cachedContacts[i].hasOwnProperty('phone')){
-      label.innerText = cachedContacts[i].name+"\n\n"+cachedContacts[i].phone;	
+      if (parsedData.hasOwnProperty('phone')){
+      label.innerText = parsedData.name+"\n\n"+parsedData.phone;	
       } 
-      if (cachedContacts[i].hasOwnProperty('email')){
-      label.innerText = cachedContacts[i].name+"\n\n"+cachedContacts[i].email;
+      if (cparsedData.hasOwnProperty('email')){
+      label.innerText = parsedData.name+"\n\n"+parsedData.email;
       }
       column2.appendChild(label);
       
