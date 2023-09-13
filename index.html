@@ -78,24 +78,24 @@
 			const container = document.getElementById('image-container');
 			
         		for (let i = 0; i < cachedContacts.length; i++) {
-				var row = document.createElement('div');
+				const row = document.createElement('div');
     				row.classList.add("row");
 				
-				var column1 = document.createElement('div');
+				const column1 = document.createElement('div');
 				column1.classList.add("column");
 				const img = document.createElement('img');
             			img.src = 'data:image/png;base64,'+cachedContacts[i].photo;
 				column1.appendChild(img);
 				
-    				var column2 = document.createElement('div');
+    				const column2 = document.createElement('div');
 				column2.classList.add("column");
 				const label = document.createElement('label');
-				var token = cachedContacts[i].tokenType;
+				
 				if (cachedContacts[i].hasOwnProperty('phone')){
 				label.innerText = cachedContacts[i].name+"\n\n"+cachedContacts[i].phone;	
 				} 
 				if (cachedContacts[i].hasOwnProperty('email')){
-				label.innerText = cachedContacts[i].name+"\n\n"+cachedContacts[i].phone;
+				label.innerText = cachedContacts[i].name+"\n\n"+cachedContacts[i].email;
 				}
 				column2.appendChild(label);
 				
