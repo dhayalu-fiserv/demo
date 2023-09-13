@@ -79,18 +79,24 @@
      			
         		for (let i = 0; i < cachedContacts.length; i++) {
 				var row = document.createElement('div');
+				
 				var column1 = document.createElement('div');
-    				var column2 = document.createElement('div');
+				column1.classList.add("column");
 				const img = document.createElement('img');
             			img.src = 'data:image/png;base64,'+cachedContacts[i].photo;
+				column1.appendChild(img);
+				
+    				var column2 = document.createElement('div');
+				column2.classList.add("column");
 				const label = document.createElement('label');
-				var token = cachedContacts[i].tokenType
+				var token = cachedContacts[i].tokenType;
 				label.innerText = cachedContacts[i].name+"\n\n"+cachedContacts[i].token;
-				//column1.appendChild(img);
-				//column1.appendChild(label);
-				//column2.appendChild(label);
-				container.appendChild(img);
-				container.appendChild(label);
+				column2.appendChild(label);
+				
+				row.appendChild(column1);
+				row.appendChild(column2);
+				
+				container.appendChild(row);
 				
 			// if (cachedContacts[i].hasOwnProperty('photo')){
 			// 	const img = document.createElement('img');
