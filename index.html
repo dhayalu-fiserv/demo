@@ -78,10 +78,15 @@
 			const container = document.getElementById('image-container');
      			
         		for (let i = 0; i < cachedContacts.length; i++) {
+				
 			if (cachedContacts[i].hasOwnProperty('photo')){
 				const img = document.createElement('img');
             			img.src = 'data:image/png;base64,'+cachedContacts[i].photo;
+				const label = document.createElement('label');
+				label.innerText = cachedContacts[i].name+"\n\n"+cachedContacts[i].tokenType;
+				
             			container.appendChild(img);
+				container.appendChild(label);
 			}
         		}
 		}else{
