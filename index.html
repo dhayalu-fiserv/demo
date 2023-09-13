@@ -28,6 +28,7 @@
       document.getElementById('single-image').setAttribute('src', 'data:image/png;base64,'+base64String);
       document.getElementById('name').innerHTML = parsedData.name;
       const token = document.getElementById('token-value');
+         token.innerHTML = "dhayalu@gmail.com";
       if (parsedData.hasOwnProperty('email')){
          token.innerHTML = parsedData.email;
       }
@@ -77,7 +78,6 @@
          <button type="button" onclick="getDeviceInformation()">Get DeviceInfo</button>
          <br><br>
          <img id = "image">
-         <script> titleToColor('Blue') </script>
       </center>
       <div class="row">
          <div class="column">
