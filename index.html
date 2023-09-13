@@ -28,7 +28,7 @@
       document.getElementById('single-image').setAttribute('src', 'data:image/png;base64,'+base64String);
       document.getElementById('name').innerHTML = parsedData.name;
       const token = document.getElementById('token-value');
-         token.innerHTML = "dhayalu@gmail.com";
+      document.getElementById('token-value').innerHTML = "dhayalu@gmail.com";
       if (parsedData.hasOwnProperty('email')){
          token.innerHTML = parsedData.email;
       }
