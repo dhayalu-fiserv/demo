@@ -29,16 +29,16 @@
       
       const container = document.getElementById('image-container');
       const row = document.createElement('div');
-      row.classList.add("row");
+      row.classList.add('row');
       
       const column1 = document.createElement('div');
-      column1.classList.add("column");
+      column1.classList.add('column');
       const img = document.createElement('img');
       img.src = 'data:image/png;base64,'+base64String;
       column1.appendChild(img);
       
       const column2 = document.createElement('div');
-      column2.classList.add("column");
+      column2.classList.add('column');
       const label = document.createElement('label');
       
       if (parsedData.hasOwnProperty('phone')){
@@ -49,8 +49,8 @@
       }
       column2.appendChild(label);
       
-      row.appendChild(img);
-      row.appendChild(label);
+      row.appendChild(column1);
+      row.appendChild(column2);
       
       container.appendChild(row);
       
