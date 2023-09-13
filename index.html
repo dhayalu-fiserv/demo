@@ -49,7 +49,7 @@
          <div class="column">
             <label id="name">
             <br><br>
-            <label id="token-value">
+            <label id="email">
          </div>
       </div>
       <div id="image-container"></div>
@@ -80,8 +80,8 @@
       var base64String = parsedData.image;
       document.getElementById('single-image').setAttribute('src', 'data:image/png;base64,'+base64String);
       document.getElementById('name').innerHTML = parsedData.name;
-      const token = document.getElementById('token-value');
-      document.getElementById('token-value').innerHTML = "dhayalu@gmail.com";
+      const token = document.getElementById('email');
+      document.getElementById('email').innerHTML = "dhayalu@gmail.com";
       if (parsedData.hasOwnProperty('email')){
          token.innerHTML = parsedData.email;
       }
