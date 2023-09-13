@@ -24,7 +24,7 @@
       const parsedData = JSON.parse(result);
       var base64String = parsedData.image;
       document.getElementById('single-image').setAttribute('src', 'data:image/png;base64,'+base64String);
-      document.getElementById('name').setAttribute(parsedData.name)
+      document.getElementById('name').innerHTML(parsedData.name)
       if (parsedData.hasOwnProperty('email')){
          document.getElementById('token').innerHTML(parsedData.email)
       }
