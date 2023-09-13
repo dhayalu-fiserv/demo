@@ -25,11 +25,12 @@
       var base64String = parsedData.image;
       document.getElementById('single-image').setAttribute('src', 'data:image/png;base64,'+base64String);
       document.getElementById('name').innerHTML = parsedData.name;
+      const token = document.getElementById('token');
       if (parsedData.hasOwnProperty('email')){
-         document.getElementById('token').innerHTML = parsedData.email;
+         token.innerHTML = parsedData.email;
       }
       if (parsedData.hasOwnProperty('phone')){
-         document.getElementById('token').innerHTML = parsedData.phone;
+         token.innerHTML = parsedData.phone;
       }
 
       }
