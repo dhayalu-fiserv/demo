@@ -1,6 +1,26 @@
 <html>
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  max-width: 100%;
+  padding: 10px;
+  height: 150px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
    </head>
 
    <body id="body">
@@ -113,7 +133,7 @@
       const container = document.getElementById('image-container');
       const row = document.createElement('div');
       row.classList.add("row");
-      		for (let i = 0; i < cachedContacts.length; i++) {
+      for (let i = 0; i < cachedContacts.length; i++) {
       //const row = document.createElement('div');
       //row.classList.add("row");
       
