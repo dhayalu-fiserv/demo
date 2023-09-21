@@ -88,9 +88,9 @@
 
       // Callback Single Contact
       function callbackOneContact(obj) {
-        var result = obj.contact
+        var result = JSON.stringify(obj.contact)
         if(result.includes("Contact Not")) {
-      alert(JSON.stringify(result))
+      alert(result)
         }else
       {
          
