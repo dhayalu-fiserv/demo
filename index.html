@@ -88,8 +88,7 @@
 
       // Callback Single Contact
       function callbackOneContact(obj) {
-         const regex = /('(?=(,\s*')))|('(?=:))|((?<=([:,]\s*))')|((?<={)')|('(?=}))/g;
-        var result = obj.contact.replace(regex, '"')
+        var result = obj.contact
         if(result.includes("Contact Not")) {
       alert(result)
         }else
