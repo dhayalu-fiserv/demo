@@ -89,13 +89,13 @@
       // Callback Single Contact
       function callbackOneContact(obj) {
          const regex = /('(?=(,\s*')))|('(?=:))|((?<=([:,]\s*))')|((?<={)')|('(?=}))/g;
-        var result = obj.contact
+        var result = obj.contact.replace(regex, '"')
         if(result.includes("Contact Not")) {
-      alert(result.replace(regex, '"'))
+      alert(result)
         }else
       {
          
-      alert( "Result : " + result.replace(regex, '"'))
+      alert( "Result : " + result)
       const parsedData = JSON.parse(result);
       var base64String = parsedData.image;
       document.getElementById('single-image').setAttribute('src', 'data:image/png;base64,'+base64String);
