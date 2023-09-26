@@ -156,22 +156,22 @@
       }
       column2.appendChild(label);
       
-      //row.appendChild(column1);
-      //row.appendChild(column2);
+      row.appendChild(column1);
+      row.appendChild(column2);
       
       
       
-      // if (cachedContacts[i].hasOwnProperty('photo')){
-      // 	const img = document.createElement('img');
-      //          			img.src = 'data:image/png;base64,'+cachedContacts[i].photo;
-      // 	const label = document.createElement('label');
-      // 	label.innerText = cachedContacts[i].name+"\n\n"+cachedContacts[i].tokenType;
+      if (cachedContacts[i].hasOwnProperty('photo')){
+      	const img = document.createElement('img');
+               			img.src = 'data:image/png;base64,'+cachedContacts[i].photo;
+      	const label = document.createElement('label');
+      	label.innerText = cachedContacts[i].name+"\n\n"+cachedContacts[i].tokenType;
       
-      //          			container.appendChild(img);
-      // 	container.appendChild(label);
-      // }
+               			container.appendChild(img);
+      	container.appendChild(label);
+      }
       		}
-      //container.appendChild(row);
+      container.appendChild(row);
       }else{
       alert("Cached : false")
       }
