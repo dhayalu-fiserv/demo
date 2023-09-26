@@ -161,15 +161,15 @@
       
       
       
-      if (cachedContacts[i].hasOwnProperty('photo')){
-      	const img = document.createElement('img');
-               			img.src = 'data:image/png;base64,'+cachedContacts[i].photo;
-      	const label = document.createElement('label');
-      	label.innerText = cachedContacts[i].name+"\n\n"+cachedContacts[i].tokenType;
+      // if (cachedContacts[i].hasOwnProperty('photo')){
+      // 	const img = document.createElement('img');
+      //          			img.src = 'data:image/png;base64,'+cachedContacts[i].photo;
+      // 	const label = document.createElement('label');
+      // 	label.innerText = cachedContacts[i].name+"\n\n"+cachedContacts[i].tokenType;
       
-               			container.appendChild(img);
-      	container.appendChild(label);
-      }
+      //          			container.appendChild(img);
+      // 	container.appendChild(label);
+      // }
       		}
       container.appendChild(row);
       }else{
