@@ -131,8 +131,8 @@
           const parsedData = JSON.parse(obj.contact);
       //var contact = localStorage.getItem("contact");
       if (parsedData.cached){
-      alert("Cached before stringify : "+"\n"+cachedContacts)
-      //alert("Cached after stringify: "+JSON.stringify(parsedData)+"\n"+result)
+      //alert("Cached before stringify : "+"\n"+cachedContacts)
+      alert("Cached after stringify: "+JSON.stringify(parsedData)+"\n"+result)
       const container = document.getElementById('image-container');
       const row = document.createElement('div');
       row.classList.add("row");
