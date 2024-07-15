@@ -63,6 +63,8 @@
          <br><br>
          <button type="button" onclick="getDeviceInformation()">Get DeviceInfo</button>
          <br><br>
+         <button type="button" onclick="lauchURL()">Lauch URL</button>
+         <br><br>
          <img id = "image">
       </center>
       <div class="row">
@@ -349,6 +351,17 @@
       //Android
       if (window.FTKAndroidInterface != undefined) {
       window.FTKAndroidInterface.getDeviceInfo();
+      
+          }
+      }
+
+      // Launch URL
+      function lauchURL() {
+      
+      //Android
+      if (window.FTKAndroidInterface != undefined) {
+      var url = "https://www.fiserv.com";
+      window.FTKAndroidInterface.sessionTimeout(url);
       
           }
       }
