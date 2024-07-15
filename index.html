@@ -63,7 +63,7 @@
          <br><br>
          <button type="button" onclick="getDeviceInformation()">Get DeviceInfo</button>
          <br><br>
-         <button type="button" onclick="lauchURL()">Lauch URL</button>
+         <button type="button" onclick="launchURL()">Launch URL</button>
          <br><br>
          <img id = "image">
       </center>
@@ -356,12 +356,12 @@
       }
 
       // Launch URL
-      function lauchURL() {
+      function launchURL() {
       
       //Android
       if (window.FTKAndroidInterface != undefined) {
       var url = "https://www.fiserv.com";
-      window.FTKAndroidInterface.lauchURL(url);
+      window.FTKAndroidInterface.launchURL(url);
       
           }
       }
