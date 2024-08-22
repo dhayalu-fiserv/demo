@@ -29,6 +29,8 @@
          <br><br>
          <h1 id="title">Bridge Sdk</h1>
          <br><br>
+         <input type='text' id='input_id1' />
+         <br><br>
          <button type="button" onclick="getSingleContactFromNativeCode()">Get Contact</button>
          <br><br>
          <button type="button" onclick="getContactsFromNativeCode()">Get All Contact</button>
@@ -201,8 +203,10 @@
       }
 
       //CallbackOtp
+      let inputField = document.getElementById("input_id1");
       function callbackOtp(obj) {
       const parsedData = JSON.parse(obj.otp);
+      inputField.value = parsedData.otp;
       alert( "Result : " +obj.otp)
       
       }
