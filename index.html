@@ -326,6 +326,16 @@
       
       }
       }
+
+      // Launch URL
+      function launchURL() {
+      
+      //Android
+      if (window.FTKAndroidInterface != undefined) {
+      window.FTKAndroidInterface.fetchTag("", "");
+      
+          }
+      }
       
       // get location from sdk
       function getLocation() {
@@ -367,16 +377,6 @@
           }
       }
 
-      // Launch URL
-      function launchURL() {
-      
-      //Android
-      if (window.FTKAndroidInterface != undefined) {
-      var value = "";
-      window.FTKAndroidInterface.fetchTag(value);
-      
-          }
-      }
       
       // Callback Device Information
       function callbackDeviceInfo(obj) {
