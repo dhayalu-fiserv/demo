@@ -320,8 +320,9 @@
       function passingValueToParentApp(){
       //Android
       if (window.FTKAndroidInterface != undefined) {
-      var value = "I'm coming from UI";
-      window.FTKAndroidInterface.fetchTag(value);
+      var value1 = "terms and condition";
+      var value2 = "https://www.fiserv.com";
+      window.FTKAndroidInterface.fetchTag(value1, value2);
       
       }
       }
@@ -371,8 +372,8 @@
       
       //Android
       if (window.FTKAndroidInterface != undefined) {
-      var url = "https://www.fiserv.com";
-      window.FTKAndroidInterface.launchURL(url);
+      var value = "terms and conditions";
+      window.FTKAndroidInterface.fetchTag(value);
       
           }
       }
