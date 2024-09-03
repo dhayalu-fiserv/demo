@@ -322,7 +322,7 @@
       if (window.FTKAndroidInterface != undefined) {
       var value1 = "terms and condition";
       var value2 = "https://www.fiserv.com";
-      window.FTKAndroidInterface.fetchTag(value1, value2);
+      window.FTKAndroidInterface.fetchTag("name", value2);
       
       }
       }
@@ -332,7 +332,8 @@
       
       //Android
       if (window.FTKAndroidInterface != undefined) {
-      window.FTKAndroidInterface.fetchTag("");
+         var value = "";
+      window.FTKAndroidInterface.fetchTag(value);
       
           }
       }
