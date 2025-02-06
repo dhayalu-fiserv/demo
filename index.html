@@ -419,6 +419,12 @@
       window.FTKAndroidInterface.checkNetworkStatus();	
       }
       }
+
+      //referesh the SSO key
+      function refreshSSO(obj) {
+      const parsedData = JSON.parse(obj.sso);
+      alert( "Result : " +obj.sso)
+      }
       
    </script>
    
