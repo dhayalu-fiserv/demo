@@ -53,7 +53,7 @@
          <br><br>
          <button type="button" onclick="checkNetworkStatusClicked()">Check Network Status</button>
          <br><br>	
-         <button type="button" onclick="timeOut()">Session TimeOut</button>
+         <button type="button" onclick="biometricAuthentication()">Biometric Authentication</button>
          <br><br>
          <button type="button" onclick="timeOutWithName()">Session Time Out with Tag</button>
          <br><br>
@@ -288,6 +288,20 @@
       alert(obj.permission)
       // setTitle(obj.photo);
       }
+
+      funtion biometricAuthentication(){
+         if (window.FTKAndroidInterface != undefined) {
+      
+            window.FTKAndroidInterface.biometricAuthentication();
+      
+         }
+      }
+
+      funtion callbackBiometricResult(obj){
+         
+         alert(obj.result)
+      }
+         
       
       function timeOut(){
       //Android
