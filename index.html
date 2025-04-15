@@ -53,7 +53,7 @@
           <br><br>
           <button type="button" onclick="checkNetworkStatusClicked()">Check Network Status</button>
            <br><br>	
-          <button type="button" onclick="biometricAuthentication()">Biometric Authentication</button>
+          <button type="button" onclick="biometricAuthenticationFun()">Biometric Authentication</button>
           <br><br>	
           <button type="button" onclick="timeOut()">Session TimeOut</button>
           <br><br>
@@ -202,7 +202,7 @@
        const parsedData = JSON.parse(obj.code);
        alert( "Result : " +obj.code)
        }
-        funtion biometricAuthentication(){
+        funtion biometricAuthenticationFun(){
             if (window.FTKAndroidInterface != undefined) {
                window.FTKAndroidInterface.biometricAuthentication();
            }
