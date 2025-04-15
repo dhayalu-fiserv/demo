@@ -52,6 +52,8 @@
           <button type="button" onclick="checkPermissionStatus()">Check Permission</button>
           <br><br>
           <button type="button" onclick="checkNetworkStatusClicked()">Check Network Status</button>
+           <br><br>	
+          <button type="button" onclick="biometricAuthentication()">Biometric Authentication</button>
           <br><br>	
           <button type="button" onclick="timeOut()">Session TimeOut</button>
           <br><br>
@@ -199,7 +201,15 @@
        function callbackQRCode(obj) {
        const parsedData = JSON.parse(obj.code);
        alert( "Result : " +obj.code)
- 
+       }
+        funtion biometricAuthentication(){
+            if (window.FTKAndroidInterface != undefined) {
+               window.FTKAndroidInterface.biometricAuthentication();
+           }
+        }
+
+        function callbackBiometricResult(obj) {
+           alert( "Result : " +obj.result)
        }
  
        //CallbackOtp
