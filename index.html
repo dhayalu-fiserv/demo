@@ -300,6 +300,18 @@
  
        }
        }
+       function biometricAuthenticationFun()
+       {
+         if (window.FTKAndroidInterface != undefined) {
+           window.FTKAndroidInterface.biometricAuthentication();
+             }  
+       }
+
+        function biometricResult(obj)
+        {
+            alert( "Result : " +obj.result)
+        }
+        
  
        function timeOutWithName(){
        //Android
