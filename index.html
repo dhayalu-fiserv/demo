@@ -302,7 +302,9 @@
        }
        function biometricAuthenticationFun()
        {
+           console.log("biometric authentication");
          if (window.FTKAndroidInterface != undefined) {
+             console.log("ftk android interface");
            window.FTKAndroidInterface.biometricAuthentication();
              }  
        }
