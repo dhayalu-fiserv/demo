@@ -57,6 +57,8 @@
           <br><br>	
           <button type="button" onclick="timeOut()">Session TimeOut</button>
           <br><br>
+           <button type="button" onclick="tnTimeOut()">TN TimeOut</button>
+          <br><br>
           <button type="button" onclick="timeOutWithName()">Session Time Out with Tag</button>
           <br><br>
           <button type="button" onclick="passingValueToParentApp()">Passing value to Parent App</button>
@@ -93,6 +95,24 @@
  
            }
        }
+
+        function tnTimeOut(){
+            if (this.webviewContainer === 'webview_android') {
+      try {
+        IPSAndroidInterface.IPSTimeOutTN();
+      } catch (error) {
+        const msg = `EsignScreenComponent - Decline - Webview Android - IPSAndroidInterface - IPSTimeOut`;
+        cfn.logError(msg);
+      }
+    }
+    else if (this.webviewContainer === 'webview_ios') {
+      this.window.location.href = SanitizeUrlUtils.sanitizeUrl('IPSiOSInterface://IPSTimeOutTN');
+      //New webkit implementation.
+      if (this.window['webkit']) {
+        this.window['webkit'].messageHandlers.timeoutTN.postMessage({});
+      }
+    }
+        }
  
        // Callback Single Contact
        function callbackOneContact(obj) {
