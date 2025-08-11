@@ -244,6 +244,11 @@
                window.FTKAndroidInterface.sharePhoto(image, "", "");
  
            }
+           //iOS
+           if (window.webkit != undefined) {
+               window.FTKAndroidInterface.sharePhoto(image, "", "");
+ 
+           }
        }
  
        //Print Qr code
@@ -251,7 +256,9 @@
            //Android
        if (window.FTKAndroidInterface != undefined) {
                window.FTKAndroidInterface.printPhoto(image, text, url);
- 
+       }
+           if (window.webkit != undefined) {
+               window.FTKAndroidInterface.printPhoto(image, text, url);
        }
        }
  
@@ -362,6 +369,14 @@
        window.FTKAndroidInterface.fetchTag(value1);
  
        }
+           //iOS
+        if (window.webkit != undefined) {
+       var value1 = "terms and condition";
+       var value2 = "https://www.fiserv.com";
+       //window.webkit.fetchTag("name", value2);
+       window.webkit.fetchTag(value1);
+ 
+       }
        }
  
        // Launch URL
@@ -374,6 +389,14 @@
           var value1 = "terms and condition";
           var value2 = "https://www.1stsource.com/app/uploads/2025/05/1st-Source-Bank-Zelle-Terms-and-Conditions-5.2025.pdf";
           window.FTKAndroidInterface.fetchTag("name", value2);
+ 
+           }
+           if (window.webkit != undefined) {
+          //var value = "";
+       //window.webkit.fetchTag("", "");
+          var value1 = "terms and condition";
+          var value2 = "https://www.1stsource.com/app/uploads/2025/05/1st-Source-Bank-Zelle-Terms-and-Conditions-5.2025.pdf";
+          window.webkit.fetchTag("name", value2);
  
            }
        }
