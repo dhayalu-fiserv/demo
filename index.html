@@ -486,12 +486,12 @@
        function updateFontScale(obj) {
            if(window.webkit != undefined) {
  
-            alert(obj.scale)
+            alert("Scale: "+obj.scale)
             document.body.style.fontSize = (obj.scale * 16) + 'px';
  
             } else {
  
-                document.body.style.fontSize = (scale * 16) + 'px';
+                document.body.style.fontSize = (obj * 16) + 'px';
             }
        } 
  
