@@ -483,8 +483,16 @@
        }
        }
 
-       function updateFontScale(scale) {
-           document.body.style.fontSize = (scale * 16) + 'px';
+       function updateFontScale(obj) {
+           if(window.webkit != undefined) {
+ 
+            alert(obj.scale)
+            document.body.style.fontSize = (obj.scale * 16) + 'px';
+ 
+            } else {
+ 
+                document.body.style.fontSize = (scale * 16) + 'px';
+            }
        } 
  
     </script>
